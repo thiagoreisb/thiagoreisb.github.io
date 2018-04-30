@@ -1,6 +1,8 @@
 (function($){
   $(function(){
 
+  	$('#navbar').append(header);
+  	$('#footer').append(footer);
     $('.sidenav').sidenav();
     $('.parallax').parallax();
 
