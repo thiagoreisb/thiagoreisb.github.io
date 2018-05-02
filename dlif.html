@@ -3,12 +3,23 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Projetos - Thiago Reis</title>
-		<link rel="icon" href="images/icon.png">
+		<title>Don't Let It Fall - Thiago Reis</title>
+		<link rel="icon" href="../images/icon.png">
 		<!-- CSS -->
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+		<style type="text/css">
+			
+			#theCanvas {
+				width: 480px;
+				margin: auto;
+				border: 5px solid black;
+				display: block;
+			}
+		
+		</style>
 
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="js/processing.min.js"></script>
@@ -16,36 +27,11 @@
 	<body>
 		<div id="navbar"></div>
 
-		<div id="index-banner" class="parallax-container">
-			<div class="section no-pad-bot">
-				<div class="container">
-					<br><br>
-					<h1 class="header center teal-text text-lighten-2"><span id="p" onmouseenter="permute('p')" onmouseleave="unpermute('p')">Projects</span></h1>
-					<div class="row center">
-						<h5 class="header col s12 light">Here are some personal projects</h5>
-					</div>
-					<br><br>
-				</div>
-			</div>
-			<div class="parallax"><img src="images/background1.jpg" alt="Unsplashed background img 1"></div>
-		</div>
-
 		<div class="container">
 			<div class="section">
 				<div class="row">
 					<div class="col s12 m7">
-						<div class="card small">
-							<div class="card-image">
-								<img src="images/gaming.jpeg">
-								<span class="card-title">Games</span>
-							</div>
-							<div class="card-content">
-								<p>Some simple games that I made.</p>
-							</div>
-							<div class="card-action">
-								<a href="dlif.html">Don't Let It Fall</a>
-							</div>
-						</div>
+						<canvas id="theCanvas" data-processing-sources="assets/dont_let_it_fall.pde"></canvas>
 					</div>
 				</div>
 			</div>
@@ -54,7 +40,6 @@
 		<div id="footer"></div>
 
 		<!-- Scripts -->
-		<script type="text/javascript" src="js/permutador.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 		<script type="text/javascript" src="assets/navbar.js"></script>
 		<script type="text/javascript" src="assets/footer.js"></script>
