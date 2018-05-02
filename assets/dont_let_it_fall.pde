@@ -26,7 +26,7 @@ int points;
 int best;
 
 void setup() {
-  size(400, 600);
+  size(300, 500);
   //surface.setResizable(true);
   f = createFont("Arial", 16, true);
   playing = START;
@@ -46,8 +46,8 @@ void draw() {
   textFont(f, 16);
   fill(255);
   textAlign(LEFT, CENTER);
-  if(playing == START) text("Click on the ball to play!\nPress 'r' to restart and 'q' to exit", width/8, 35);
-  else text("Points: " + points + "\nPress 'r' to restart and 'q' to exit", width/8, 35);
+  if(playing == START) text("Click on the ball to play!\nPress 'r' to restart", width/8, 35);
+  else text("Points: " + points + "\nPress 'r' to restart", width/8, 35);
   
   // Ball
   stroke(0); fill(255,0,0); 
@@ -84,7 +84,7 @@ void mousePressed() {
 
 // Handle with key events
 void keyPressed() {
-  if(key == 'q' || key == 'Q') exit();
+  //if(key == 'q' || key == 'Q') exit();
   if(key == 'r' || key == 'R') { playing = 0; points = 0; newBest = false; }
 }
 
