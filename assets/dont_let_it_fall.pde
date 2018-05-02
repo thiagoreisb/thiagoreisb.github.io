@@ -36,7 +36,7 @@ void setup() {
 
 void draw() {
   background(255);
-  minimumWindow(400, 600);
+  //minimumWindow(400, 600);
   
   // Menu
   fill(0);
@@ -138,11 +138,11 @@ float distance(float x1, float y1, float x2, float y2) {
 }
 
 // Deal with window size
-void minimumWindow(int mWidth, int mHeight) {
+/*void minimumWindow(int mWidth, int mHeight) {
   if (width < mWidth) {
     surface.setSize(mWidth, height);
   }
   if (height < mHeight) {
     surface.setSize(width, mHeight);
   }
-}
+}*/
