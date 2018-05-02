@@ -68,7 +68,7 @@ void draw() {
 
 // Handle with mouse click when it
 void mousePressed() {
-  float distance = distance(mouseX, mouseY, ballX, ballY);
+  float distance = calcDistance(mouseX, mouseY, ballX, ballY);
   if(distance <= ballSize/2) {
     if(playing == START) { playing = GAME; yVel = VELOC; if(distance != 0) xVel = VELOC * (mouseX - ballX) / distance; }
     else if (playing == GAME && !collisions()) {  // If it's stuck on a wall, it won't allow any click from the player
@@ -133,7 +133,7 @@ boolean collisions() {
 }
 
 // Calculate the euclidian's distance between two points
-float distance(float x1, float y1, float x2, float y2) {
+float calcDistance(float x1, float y1, float x2, float y2) {
   return sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
 }
 
